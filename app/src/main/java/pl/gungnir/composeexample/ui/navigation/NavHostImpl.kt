@@ -6,9 +6,9 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.navArgument
-import pl.gungnir.composeexample.ui.screens.FirstScreen
-import pl.gungnir.composeexample.ui.screens.DetailsScreen
-import pl.gungnir.composeexample.ui.screens.SecondScreen
+import pl.gungnir.composeexample.ui.navigation.screens.FirstScreen
+import pl.gungnir.composeexample.ui.navigation.screens.DetailsScreen
+import pl.gungnir.composeexample.ui.navigation.screens.SecondScreen
 
 @Composable
 fun NavHostImpl(

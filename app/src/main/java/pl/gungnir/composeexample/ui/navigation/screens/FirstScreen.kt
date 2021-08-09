@@ -1,4 +1,4 @@
-package pl.gungnir.composeexample.ui.screens
+package pl.gungnir.composeexample.ui.navigation.screens
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Button
@@ -11,9 +11,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun SecondScreen(
-    navToBack: () -> Unit,
-    navToDetails: (String) -> Unit,
+fun FirstScreen(
+    navToSecond: () -> Unit
 ) {
     Column(
         modifier = Modifier
@@ -21,21 +20,18 @@ fun SecondScreen(
             .wrapContentSize(),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text(text = "Ekran nr 2", style = MaterialTheme.typography.h3)
+        Text(text = "Ekran nr 1", style = MaterialTheme.typography.h3)
         Spacer(modifier = Modifier.height(16.dp))
-        Button(onClick = { navToBack() }) {
-            Text(text = "Do poprzedniego ekranu")
-        }
-
-        Spacer(modifier = Modifier.height(16.dp))
-        Button(onClick = { navToDetails("dane z poprzedniego ekranu") }) {
-            Text(text = "Do ekranu szczegółów")
+        Button(onClick = { navToSecond() }) {
+            Text(text = "Do następnego ekranu")
         }
     }
 }
 
 @Preview(showBackground = true)
 @Composable
-private fun SecondScreenPreview() {
-    SecondScreen(navToBack = {}, navToDetails = {})
+private fun FirstScreenPreview() {
+    FirstScreen(
+        navToSecond = {}
+    )
 }

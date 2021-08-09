@@ -1,4 +1,4 @@
-package pl.gungnir.composeexample.ui.screens
+package pl.gungnir.composeexample.ui.navigation.screens
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.MaterialTheme
